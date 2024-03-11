@@ -55,9 +55,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modifier une réservation</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Inclure d'autres fichiers CSS ou JS si nécessaire -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 <header>
@@ -67,12 +64,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <li><a href="view_reservations.php">liste des réservations</a></li>
                 <li><a href="add_reservation.php">Ajouter une réservation</a></li>
                 <li><a href="view_flights.php">Liste des vols</a></li>
+                <li><a href="add_flight.php">Liste des vols</a></li>
             </ul>
         </nav>
     </header>
     <div class="container">
         <h2>Modifier une réservation</h2>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) . '?id=' . $id; ?>" method="post">
+        <form action="" method="post">
             <fieldset>
             <label for="nom">Nom :</label>
             <input type="text" id="nom" name="nom" value="<?php echo $reservation['nom']; ?>" required><br>
@@ -80,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="text" id="prenom" name="prenom" value="<?php echo $reservation['prenom']; ?>" required><br>
             <label for="email">Email :</label>
             <input type="email" id="email" name="email" value="<?php echo $reservation['email']; ?>" required><br>
-            <button type="submit">Enregistrer</button>
+            <button type="submit">Mise à jour</button>
             </fieldset>
         </form>
     </div>

@@ -1,20 +1,6 @@
 <?php
 require_once('config.php');
 
-// Fonction pour vérifier si l'utilisateur est connecté en tant qu'administrateur
-function isAdminLoggedIn() {
-    // Mettez ici votre propre logique de vérification de connexion de l'administrateur
-    // Par exemple, vérifier la présence d'une session ou d'un cookie pour l'administrateur
-    // Dans cet exemple, je retourne simplement true pour simuler une connexion réussie.
-    return true;
-}
-
-// Vérifier si l'utilisateur est connecté en tant qu'administrateur
-if (!isAdminLoggedIn()) {
-    header("Location: login.php");
-    exit;
-}
-
 // Vérifier si le formulaire d'ajout de vol a été soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Récupérer les données du formulaire
@@ -58,12 +44,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <li><a href="view_reservations.php">liste des réservations</a></li>
                 <li><a href="add_reservation.php">Ajouter une réservation</a></li>
                 <li><a href="view_flights.php">Liste des vols</a></li>
+                <li><a href="add_flight.php">Liste des vols</a></li>
             </ul>
         </nav>
     </header>
     <div class="container">
         <h2>Ajouter un vol</h2>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+        <form action="" method="post">
             <fieldset>
             <label for="compagnie">Compagnie :</label>
             <input type="text" id="compagnie" name="compagnie" required><br>

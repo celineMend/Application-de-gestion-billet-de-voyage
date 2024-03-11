@@ -1,11 +1,5 @@
 <?php
-// Inclure le fichier de configuration de la base de données
 require_once("config.php");
-
-// Vérifier si l'utilisateur est connecté en tant qu'administrateur
-// Si l'utilisateur n'est pas connecté, rediriger vers la page de connexion
-// (Assumer que la fonction isAdminLoggedIn() vérifie si l'utilisateur est connecté en tant qu'administrateur)
-
 
 // Récupérer la liste des réservations depuis la base de données
 $query = "SELECT * FROM reservation";
@@ -31,6 +25,7 @@ if ($result && mysqli_num_rows($result) > 0) {
                     <li><a href="view_reservations.php">liste des réservations</a></li>
                     <li><a href="add_reservation.php">Ajouter une réservation</a></li>
                     <li><a href="view_flights.php">Liste des vols</a></li>
+                    <li><a href="add_flight.php">Liste des vols</a></li>
                 </ul>
              </nav>
         </header>
@@ -71,11 +66,9 @@ if ($result && mysqli_num_rows($result) > 0) {
                     ?>
                      <?php
                             } else {
-                                // Afficher un message d'erreur si la requête a échoué
                                 echo "Erreur: " . mysqli_error($conn);
                             }
 
-                            // Fermer la connexion à la base de données
                             mysqli_close($conn);
                             ?>
 

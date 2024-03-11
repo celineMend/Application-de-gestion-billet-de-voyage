@@ -36,6 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <li><a href="view_reservations.php">liste des réservations</a></li>
                 <li><a href="add_reservation.php">Ajouter une réservation</a></li>
                 <li><a href="view_flights.php">Liste des vols</a></li>
+                <li><a href="add_flight.php">Liste des vols</a></li>
             </ul>
         </nav>
     </header>

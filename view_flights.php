@@ -29,6 +29,7 @@ if ($result && mysqli_num_rows($result) > 0) {
                     <li><a href="view_reservations.php">Liste des réservations</a></li>
                     <li><a href="add_reservation.php">Ajouter une réservation</a></li>
                     <li><a href="view_flights.php">Liste des vols</a></li>
+                    <li><a href="add_flight.php">Liste des vols</a></li>
                 </ul>
             </nav>
         </header>
@@ -63,6 +64,9 @@ if ($result && mysqli_num_rows($result) > 0) {
                 </tbody>
             </table>
         </div>
+        <footer>
+            <p>&copy; 2024 Mon Application de Réservations. Tous droits réservés.</p>
+        </footer>
     </body>
     </html>
     <?php
@@ -70,3 +74,4 @@ if ($result && mysqli_num_rows($result) > 0) {
     echo "Aucun vol trouvé.";
 }
 ?>
+ 

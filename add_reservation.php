@@ -48,13 +48,17 @@ if ( isset($_POST["envoyer"])) {
                 <li><a href="view_reservations.php">liste des réservations</a></li>
                 <li><a href="add_reservation.php">Ajouter une réservation</a></li>
                 <li><a href="view_flights.php">Liste des vols</a></li>
+                <li><a href="add_flight.php">Liste des vols</a></li>
+
             </ul>
         </nav>
     </header>
-    <div class="container">
+    <div class="contenu">
         <h2>Ajouter une réservation</h2>
         <!-- Formulaire d'ajout de réservation -->
-        <form action="view_reservations.php" method="post">
+        
+        <div class="form_add">
+        <form action="" method="post">
             <fieldset>
             <label for="nom">Nom :</label>
             <input type="text" id="nom" name="nom" required><br>
@@ -70,7 +74,9 @@ if ( isset($_POST["envoyer"])) {
             <button type="submit" name="envoyer">Ajouter la réservation</button>
             </fieldset>
         </form>
+        </div>
     </div>
+
 <footer>
     <p>&copy; 2024 Mon Application de Réservations. Tous droits réservés.</p>
 </footer>
